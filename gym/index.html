@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Responsive Web Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li><a href="#" onclick="toggleMenu();">Inicio</a></li>
+            <li><a href="#" onclick="toggleMenu();">Acerca</a></li>
+            <li><a href="#" onclick="toggleMenu();">Training</a></li>
+            <li><a href="#" onclick="toggleMenu();">Equipo</a></li>
+            <li><a href="#" onclick="toggleMenu();">Contacto</a></li>
+        </ul>
+    </div>
+    <section class="banner">
+        <header>
+            <h2 class="logo">Logo</h2>
+            <div class="toggle" onclick="toggleMenu();"></div>
+        </header>
+        <video src="img/bg.mp4" muted loop autoplay></video>
+        <div class="overlay"></div>
+        <div class="text">
+            <h2>Sé Fuerte</h2>
+            <h3>Nunca te rindas</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat magnam accusantium corrupti vel nihil nobis rem facilis hic suscipit vitae tenetur dicta alias veritatis non, incidunt dolorem amet fugit voluptate.</p>
+            <a href="#">Únete</a>
+        </div>
+        <ul class="redes">
+            <li><a href="#"><img src="img/facebook.png" alt="icono-fb"></a></li>
+            <li><a href="#"><img src="img/twitter.png" alt="icono-tw"></a></li>
+            <li><a href="#"><img src="img/instagram.png" alt="icono-ig"></a></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var banner = document.querySelector('.banner');
+            menuToggle.classList.toggle('active');
+            banner.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
