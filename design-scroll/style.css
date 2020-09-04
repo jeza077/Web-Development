@@ -17,6 +17,64 @@
 body {
     overflow-x: hidden;
 }
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    z-index: 1000;
+}
+header.sticky {
+    padding: 5px 100px;
+    background: #fff;
+}
+header .logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+header ul {
+    position: relative;
+    display: flex;
+}
+header ul li {
+    list-style: none;
+}
+header ul li a {
+    display: inline-block;
+    /* color: #fff; */
+    color: rgba(240, 248, 255, 0.918);
+    font-weight: 400;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+header ul li a:hover{
+    /* color: aliceblue; */
+    color: #fff;
+}
+header .toggle {
+    position: relative;
+    width: 36px;
+    height: 28px;
+    background: url(img/toggle.png);
+    background-size: cover;
+    cursor: pointer;
+}
+header.sticky .logo,
+header.sticky ul li a {
+    color: var(--AzulCieloHero);
+}
  /* Banner o Hero */
 .banner {
     position: relative; 
@@ -49,33 +107,7 @@ body {
     color: #fff;
     font-size: 18px;
 }
-.banner header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 40px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-}
-.banner header .logo {
-    color: #fff;
-    text-decoration: none;
-    font-size: 24px;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-.banner header .toggle {
-    position: relative;
-    width: 36px;
-    height: 28px;
-    background: url(img/toggle.png);
-    background-size: cover;
-    cursor: pointer;
-}
+
 
 /* Section Sobre Nosotros */
 .about {
