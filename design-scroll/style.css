@@ -9,8 +9,13 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box ;
+    box-sizing: border-box;
+    position: relative;
     font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
 }
  /* Banner o Hero */
 .banner {
@@ -77,6 +82,7 @@
     position: relative;
     width: 100%;
     display: flex;
+    background: var(--AzulOscuro);
 }
 .about .contentBx {
     background: var(--AzulOscuro);
@@ -125,6 +131,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 .services .container .serviceBx img {
     max-width: 100px;
