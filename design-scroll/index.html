@@ -9,17 +9,18 @@
 </head>
 <body>
     <!-- Banner o Hero -->
-        <header>
-            <a href="#" class="logo">Brand Name</a>
-            <ul>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Tecnología</a></li>
-                <li><a href="#">Clientes</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-            <!-- <div class="toggle"></div> -->
-        </header>
+    <header>
+        <a href="#" class="logo">Brand Name</a>
+        <div class="toggleMenu" onclick="menuToggle()"></div>
+        <ul class="navigation">
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#tecnologia">Tecnología</a></li>
+            <li><a href="#clientes">Clientes</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </header>
+
     <div class="banner">
         <img src="img/bg.jpg" alt="">
         <div class="content" data-0-top="opacity:0;left:100px;" data-200-top="opacity:1;left:0px;">
@@ -29,7 +30,7 @@
     </div>
 
     <!-- Acerca (about) -->
-    <section class="about">
+    <section class="about" id="nosotros">
         <div class="contentBx">
             <h2 class="heading" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:500px;">Sobre Nosotros</h2>
             <p class="text" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:-500px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel debitis iste dolor numquam ipsam possimus! Odio explicabo nostrum sequi, culpa officia atque iste harum, totam laudantium saepe dolorem animi molestias. <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus minima, nam cumque veniam autem quae minus dolor sit aspernatur. Suscipit quaerat voluptate rerum delectus eligendi sunt? Accusamus esse quas odio.</p>
@@ -38,7 +39,7 @@
     </section>
 
     <!-- Servicios -->
-    <section class="services">
+    <section class="services" id="servicios">
         <h2 class="heading" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:500px;">Nuestros Servicios</h2>
         <p class="text" data-center-center="opacity:1;right:0;" data-0-bottom="opacity:0;right:500px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel debitis iste dolor numquam ipsam possimus! Odio explicabo nostrum sequi, culpa officia atque iste harum, totam laudantium saepe dolorem animi molestias. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus minima, nam cumque veniam autem quae minus dolor sit aspernatur. Suscipit quaerat voluptate rerum delectus eligendi sunt? Accusamus esse quas odio.</p>
         <div class="container">
@@ -67,7 +68,7 @@
     </section>
 
     <!-- Tecnologia -->
-    <section class="technology">
+    <section class="technology" id="tecnologia">
         <div class="contentBx" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:-400px;">
             <h2 class="heading">Utilizamos tecnología de punta</h2>
             <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel debitis iste dolor numquam ipsam possimus! Odio explicabo nostrum sequi, culpa officia atque iste harum, totam laudantium saepe dolorem animi molestias. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus minima, nam cumque veniam autem quae minus dolor sit aspernatur. Suscipit quaerat voluptate rerum delectus eligendi sunt? Accusamus esse quas odio.</p>
@@ -78,7 +79,7 @@
     </section>
 
     <!-- Clientes -->
-    <section class="client">
+    <section class="client" id="clientes">
         <h2 class="heading" data-center-center="opacity:1;top:0;" data-0-bottom="opacity:0;top:-100px;">Nuestros Clientes</h2>
         <p class="text" data-center-center="opacity:1;bottom:0;" data-0-bottom="opacity:0;bottom:-100px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel debitis iste dolor numquam ipsam possimus! Odio explicabo nostrum sequi, culpa officia atque iste harum, totam laudantium saepe dolorem animi molestias. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus minima, nam cumque veniam autem quae minus dolor sit aspernatur. Suscipit quaerat voluptate rerum delectus eligendi sunt? Accusamus esse quas odio.</p>
         <div class="imgBx">
@@ -110,7 +111,7 @@
     </section>
 
     <!-- Contactanos -->
-    <section class="contact">
+    <section class="contact" id="contacto">
         <div data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:-600px;">
             <h2 class="heading">Contactanos</h2>
             <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae aspernatur rerum atque velit blanditiis quos maxime exercitationem facilis iusto corrupti nostrum harum unde consequatur, adipisci magni distinctio labore similique animi.</p>
@@ -151,14 +152,21 @@
         </ul>
     </section>
 
-    <script src="skrollr.js"></script>
+    <!-- <script src="skrollr.js"></script> -->
     <script type="text/javascript">
-        var s = skrollr.init();
+        // var s = skrollr.init();
+
         window.addEventListener("scroll", function() {  
             var header = document.querySelector("header");
             header.classList.toggle("sticky", window.scrollY > 0)
         })
 
+        function menuToggle() {
+            const toggleMenu = document.querySelector('.toggleMenu');
+            const navigation = document.querySelector('.navigation');
+            toggleMenu.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
     </script>
 </body>
 </html>

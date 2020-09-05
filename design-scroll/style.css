@@ -3,7 +3,8 @@
     --AzulOscuro: #162c3b;
     --VerdeOscuro: #12222d;
     --AzulClaro: #3f8ffc;
-
+    --transparante: #ffffffc4;
+    --azulBarra: #2a5d9f;
 }
 
 *{
@@ -13,7 +14,9 @@
     position: relative;
     font-family: 'Poppins', sans-serif;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     overflow-x: hidden;
 }
@@ -32,7 +35,8 @@ header {
 }
 header.sticky {
     padding: 5px 100px;
-    background: #fff;
+    /* background: #fff; */
+    background: var(--azulBarra);
 }
 header .logo {
     color: #fff;
@@ -63,19 +67,25 @@ header ul li a:hover{
     /* color: aliceblue; */
     color: #fff;
 }
-header .toggle {
+/* header .toggleMenu {
     position: relative;
     width: 36px;
     height: 28px;
     background: url(img/toggle.png);
     background-size: cover;
     cursor: pointer;
-}
+} */
 header.sticky .logo,
 header.sticky ul li a {
-    color: var(--AzulCieloHero);
+    /* color: var(--AzulCieloHero); */
+    color: #fff;
 }
+header.sticky ul li a:hover{
+    color: var(--transparante);
+}
+
  /* Banner o Hero */
+
 .banner {
     position: relative; 
     width: 100%;
@@ -107,7 +117,9 @@ header.sticky ul li a {
     color: #fff;
     font-size: 18px;
 }
-
+header.sticky .banner {
+    margin-top: 50px;
+}
 
 /* Section Sobre Nosotros */
 .about {
@@ -337,11 +349,11 @@ header.sticky ul li a {
 
 /* Responsive */
 @media (max-width: 991px) {
+    header {
+        padding: 20px 50px;
+    }
     .banner {
         padding: 50px;
-    }
-    .banner header {
-        padding: 20px 50px;
     }
     .banner .content h2 {
         font-size: 36px;
@@ -408,5 +420,70 @@ header.sticky ul li a {
     }
     .footer ul {
         margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 850px) {
+    header {
+        padding: 20px 40px;
+    }
+    header.sticky {
+        padding: 20px 50px;
+    }
+    header ul {
+        position: fixed;
+        display: flex;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.2s;
+    }
+    header ul.active {
+        visibility: visible;
+        opacity: 1;
+    }
+    header ul li a,
+    header.sticky ul li a {
+        color: #111;
+        font-size: 2em;
+        font-weight: 600;
+        margin-left: 0;
+        margin: 10px 0;
+    }
+    /* header.sticky ul li a {
+        color: var(--AzulCieloHero);
+    } */
+    header ul li a:hover,
+    header.sticky ul li a:hover {
+        color: var(--AzulClaro);
+    }
+    header .toggleMenu {
+        position: relative;
+        width: 30px;
+        height: 22px;
+        background: url(img/toggle.png);
+        background-position: center;
+        background-size: 28px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        z-index: 2;
+    }
+    /* header.sticky .toggleMenu {
+        filter: invert(1);
+    } */
+    header .toggleMenu.active {
+        background: url(../gym/img/close.png);
+        background-position: center;
+        background-size: 25px;
+        background-repeat: no-repeat;
+        filter: invert(1);
     }
 }
