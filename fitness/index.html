@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website Design Scroll</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Banner o Hero -->
+    <header>
+        <a href="#" class="logo">Fitness</a>
+        <div class="toggleMenu" onclick="menuToggle()"></div>
+        <ul class="navigation">
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#servicios">Trainers</a></li>
+            <li><a href="#tecnologia">Blog</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </header>
+
+    <div class="banner">
+        <!-- <img src="img/bg.jpg" alt=""> -->
+        <!-- <video src="../gym/img/bg.mp4" muted loop autoplay></video> -->
+        <div class="overlay"></div>
+        <div class="content" data-0-top="opacity:0;left:100px;" data-200-top="opacity:1;left:0px;">
+            <h2>Success by Design</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe deserunt provident veniam mollitia inventore, sit at vel nobis eos! Temporibus excepturi voluptates, magnam sit incidunt aliquam voluptate fugit veritatis suscipit.</p>
+        </div>
+    </div>
+
+    <!-- Acerca (about) -->
+    <!-- <section class="about" id="nosotros">
+        <div class="contentBx">
+            <h2 class="heading" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:500px;">Sobre Nosotros</h2>
+            <p class="text" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:-500px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel debitis iste dolor numquam ipsam possimus! Odio explicabo nostrum sequi, culpa officia atque iste harum, totam laudantium saepe dolorem animi molestias. <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus minima, nam cumque veniam autem quae minus dolor sit aspernatur. Suscipit quaerat voluptate rerum delectus eligendi sunt? Accusamus esse quas odio.</p>
+        </div>
+        <div class="imgBx" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:200px;"></div>
+    </section> -->
+
+    <!-- Servicios -->
+    <!-- <section class="services" id="servicios">
+        <h2 class="heading" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:500px;">Nuestros Servicios</h2>
+        <p class="text" data-center-center="opacity:1;right:0;" data-0-bottom="opacity:0;right:500px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel debitis iste dolor numquam ipsam possimus! Odio explicabo nostrum sequi, culpa officia atque iste harum, totam laudantium saepe dolorem animi molestias. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus minima, nam cumque veniam autem quae minus dolor sit aspernatur. Suscipit quaerat voluptate rerum delectus eligendi sunt? Accusamus esse quas odio.</p>
+        <div class="container">
+            <div class="serviceBx" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:-400px;">
+                <div>
+                    <img src="img/icon1.png" alt="">
+                    <h2>Diseño</h2>
+                </div>
+            </div>
+
+            <div class="serviceBx" data-center-center="opacity:1;bottom:0;" data-0-bottom="opacity:0;bottom:-400px;">
+                <div>
+                    <img src="img/icon2.png" alt="">
+                    <h2>Desarrollo</h2>
+                </div>
+            </div>
+
+            <div class="serviceBx" data-center-center="opacity:1;right:0;" data-0-bottom="opacity:0;right:-400px;">
+                <div>
+                    <img src="img/icon3.png" alt="">
+                    <h2>Branding</h2>
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="imgBx"></div> -->
+    <!-- </section> -->
+
+    <!-- Tecnologia -->
+    <!-- <section class="technology" id="tecnologia">
+        <div class="contentBx" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:-400px;">
+            <h2 class="heading">Utilizamos tecnología de punta</h2>
+            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel debitis iste dolor numquam ipsam possimus! Odio explicabo nostrum sequi, culpa officia atque iste harum, totam laudantium saepe dolorem animi molestias. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus minima, nam cumque veniam autem quae minus dolor sit aspernatur. Suscipit quaerat voluptate rerum delectus eligendi sunt? Accusamus esse quas odio.</p>
+        </div>
+        <div class="imgBx" data-center-center="opacity:1;right:0;" data-0-bottom="opacity:0;right:-400px;">
+            <img src="img/tech.png" alt="">
+        </div>
+    </section> -->
+
+    <!-- Clientes -->
+    <!-- <section class="client" id="clientes">
+        <h2 class="heading" data-center-center="opacity:1;top:0;" data-0-bottom="opacity:0;top:-100px;">Nuestros Clientes</h2>
+        <p class="text" data-center-center="opacity:1;bottom:0;" data-0-bottom="opacity:0;bottom:-100px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel debitis iste dolor numquam ipsam possimus! Odio explicabo nostrum sequi, culpa officia atque iste harum, totam laudantium saepe dolorem animi molestias. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus minima, nam cumque veniam autem quae minus dolor sit aspernatur. Suscipit quaerat voluptate rerum delectus eligendi sunt? Accusamus esse quas odio.</p>
+        <div class="imgBx">
+            <img src="img/brand1.png" alt="" data-center-center="top:0;" data-0-bottom="top:100px;">
+            <img src="img/brand2.png" alt="" data-center-center="top:0;" data-0-bottom="top:200px;">
+            <img src="img/brand3.png" alt="" data-center-center="top:0;" data-0-bottom="top:300px;">
+            <img src="img/brand4.png" alt="" data-center-center="top:0;" data-0-bottom="top:400px;">
+        </div>
+    </section> -->
+
+    <!-- Testimoniales -->
+    <!-- <section class="testimonials">
+        <h2 class="heading">Testimoniales</h2>
+        <div class="container">
+            <div class="contentBx" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:-400px;">
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel debitis iste dolor numquam ipsam possimus! Odio explicabo nostrum sequi, culpa officia atque iste harum, totam laudantium saepe dolorem animi molestias. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p><br>
+                    <h3>Alguien Famoso</h3>
+                </div>
+            </div>
+
+            <div class="contentBx" data-center-center="opacity:1;right:0;" data-0-bottom="opacity:0;right:-400px;">
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel debitis iste dolor numquam ipsam possimus! Odio explicabo nostrum sequi, culpa officia atque iste harum, totam laudantium saepe dolorem animi molestias. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p><br>
+                    <h3>Alguien Famoso</h3>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Contactanos -->
+    <!-- <section class="contact" id="contacto">
+        <div data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:-600px;">
+            <h2 class="heading">Contactanos</h2>
+            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae aspernatur rerum atque velit blanditiis quos maxime exercitationem facilis iusto corrupti nostrum harum unde consequatur, adipisci magni distinctio labore similique animi.</p>
+        </div>
+    </section>
+    <section class="about">
+        <div class="contentBx redBg">
+            <div class="form" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:-400px;">
+                <form action="">
+                    <div class="inputBx">
+                        <input type="text" name="" placeholder="Nombre Completo">
+                    </div>
+                    <div class="inputBx">
+                        <input type="text" name="" placeholder="Email">
+                    </div>  <div class="inputBx">
+                        <input type="text" name="" placeholder="Numero de Telefono">
+                    </div>
+                    <div class="inputBx">
+                        <textarea name="" id="" cols="30" rows="5" placeholder="Escribe tu mensaje aqui"></textarea>
+                    </div>
+                    <div class="inputBx">
+                        <input type="submit" name="" value="Send">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="imgBx2"></div>
+    </section> -->
+
+    <!-- Footer -->
+    <!-- <section class="footer">
+        <p class="text">Diseño y Desarrollo por Jesús Zúniga</p>
+        <ul>
+            <p class="text">Siguenos en :</p>
+            <li><a href="#"><img src="img/facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="img/twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="img/linkedin.png" alt=""></a></li>
+        </ul>
+    </section> -->
+
+    <!-- <script src="skrollr.js"></script> -->
+    <script type="text/javascript">
+        // var s = skrollr.init();
+
+        window.addEventListener("scroll", function() {  
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0)
+        })
+
+        function menuToggle() {
+            const toggleMenu = document.querySelector('.toggleMenu');
+            const navigation = document.querySelector('.navigation');
+            toggleMenu.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
