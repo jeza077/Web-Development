@@ -5,6 +5,7 @@
     --AzulClaro: #3f8ffc;
     --transparante: #ffffffc4;
     --azulBarra: #2a5d9f;
+    --hoverMenu: orangered;
 }
 
 *{
@@ -19,6 +20,19 @@ html {
 }
 body {
     overflow-x: hidden;
+}
+
+/* Globales */
+.heading {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.text {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
 }
 
 header {
@@ -36,7 +50,7 @@ header {
 header.sticky {
     padding: 5px 100px;
     /* background: #fff; */
-    background: var(--azulBarra);
+    background: var(--VerdeOscuro);
 }
 header .logo {
     color: #fff;
@@ -64,7 +78,7 @@ header ul li a {
     transition: 0.5s;
 }
 header ul li a:hover{
-    color: orangered;
+    color: var(--hoverMenu);
 }
 /* header .toggleMenu {
     position: relative;
@@ -91,8 +105,10 @@ header.sticky ul li a:hover{
     height: 100vh;
     background:var(--AzulCieloHero);
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
+    background: #111;
+    padding: 100px;
 }
 /* .banner img {
     position: absolute;
@@ -123,16 +139,41 @@ header.sticky ul li a:hover{
 .banner .content {
     position: relative;
     max-width: 750px;
-    text-align: center;
+    /* display: flex;
+    align-content: flex-start; */
+    color: #fff;
 }
 .banner .content h2 {
-    color: #fff;
-    font-size: 60px;
+    font-size: 6em;
+    font-weight: 800;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+.banner .content h3 {
+    font-size: 4em;
+    font-weight: 700;
+    line-height: 1em;
+    text-transform: uppercase
 }
 .banner .content p {
-    color: #fff;
-    font-size: 18px;
+    position: relative;
+    font-size: 1.1em;
+    font-weight: 400;
+    margin: 20px 0;
+    max-width: 700px;
+    text-transform: uppercase;
 }
+.banner .content a {
+    display: inline-block;
+    font-size: 1.1em;
+    background: #fff;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #111;
+    letter-spacing: 2px;
+}
+
 header.sticky .banner {
     margin-top: 50px;
 }
@@ -142,28 +183,24 @@ header.sticky .banner {
     position: relative;
     width: 100%;
     display: flex;
-    background: var(--AzulOscuro);
+    /* background: var(--AzulOscuro); */
+    background: #fff;
+    height: 100vh;
 }
 .about .contentBx {
-    background: var(--AzulOscuro);
+    /* background: var(--AzulOscuro); */
+    background: #fff;
     padding: 100px;
     width: 50%;
 }
-.heading {
-    color: #fff;
-    font-size: 30px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
+.about .heading {
+    color: #111;
 }
-.text {
-    color: #fff;
-    font-size: 16px;
-    font-weight: 300;
-    letter-spacing: 1px;
+.about .text {
+    color: #111;
 }
 .about .imgBx {
-    background: url(img/window.jpg);
+    background: url(../design-scroll/img/window.jpg);
     width: 50%;
     background-size: cover;
     background-position: center;
@@ -174,6 +211,10 @@ header.sticky .banner {
     background: var(--VerdeOscuro);
     padding: 100px;
     text-align: center;
+}
+.services .heading,
+.services .text {
+    color: #fff;
 }
 .services .container {
     width: 100%;
@@ -365,18 +406,15 @@ header.sticky .banner {
 
 /* Responsive */
 @media (max-width: 991px) {
-    header {
-        padding: 20px 50px;
-    }
-    .banner {
+    header, .banner {
         padding: 50px;
     }
-    .banner .content h2 {
+    /* .banner .content h2 {
         font-size: 36px;
-    }
-    .banner .content p {
+    } */
+    /* .banner .content p {
         font-size: 16px;
-    }
+    } */
     .about {
         flex-direction: column;
     }
@@ -439,9 +477,18 @@ header.sticky .banner {
     }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 660px) {
+    .banner .content h2 {
+        font-size: 3em;
+    }
+    .banner .content h3 {
+        font-size: 2em;
+    }
+    .banner .content p {
+        font-size: 16px;
+    }
     header {
-        padding: 20px 40px;
+        padding: 40px;
     }
     header.sticky {
         padding: 20px 50px;
@@ -479,13 +526,13 @@ header.sticky .banner {
     } */
     header ul li a:hover,
     header.sticky ul li a:hover {
-        color: var(--AzulClaro);
+        color: var(--hoverMenu);
     }
     header .toggleMenu {
         position: relative;
         width: 30px;
         height: 22px;
-        background: url(img/toggle.png);
+        background: url(../gym/img/menu.png);
         background-position: center;
         background-size: 28px;
         background-repeat: no-repeat;
